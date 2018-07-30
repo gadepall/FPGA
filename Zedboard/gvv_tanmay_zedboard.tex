@@ -1,0 +1,563 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{caption}
+%\usepackage{subcaption}
+%\doublespacing
+\singlespacing
+
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+\usepackage{mathtools}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{hyperref}
+%\usepackage{xtab}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{iithtlc}
+%\usepackage[framemethod=tikz]{mdframed}
+\usepackage{listings}
+\usepackage{listings}
+    \usepackage[latin1]{inputenc}                                 %%
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+
+
+
+%\usepackage{stmaryrd}
+
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+%\lstset{
+%language=C,
+%frame=single, 
+%breaklines=true
+%}
+
+%\lstset{
+	%%basicstyle=\small\ttfamily\bfseries,
+	%%numberstyle=\small\ttfamily,
+	%language=Octave,
+	%backgroundcolor=\color{white},
+	%%frame=single,
+	%%keywordstyle=\bfseries,
+	%%breaklines=true,
+	%%showstringspaces=false,
+	%%xleftmargin=-10mm,
+	%%aboveskip=-1mm,
+	%%belowskip=0mm
+%}
+
+%\surroundwithmdframed[width=\columnwidth]{lstlisting}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+language=C,
+frame=single, 
+breaklines=true
+}
+ 
+
+\begin{document}
+%
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+
+\providecommand{\nCr}[2]{\,^{#1}C_{#2}} % nCr
+\providecommand{\nPr}[2]{\,^{#1}P_{#2}} % nPr
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\left\vert#1\right\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+%\numberwithin{equation}{subsection}
+\numberwithin{equation}{problem}
+%\numberwithin{problem}{subsection}
+%\numberwithin{definition}{subsection}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+%
+%\let\StandardTheFigure\thefigure
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+%\renewcommand{\thefigure}{\theproblem}
+
+
+%\numberwithin{figure}{subsection}
+
+%\numberwithin{equation}{subsection}
+%\numberwithin{equation}{section}
+%%\numberwithin{equation}{problem}
+%%\numberwithin{problem}{subsection}
+\numberwithin{problem}{section}
+%%\numberwithin{definition}{subsection}
+%\makeatletter
+%\@addtoreset{figure}{problem}
+%\makeatother
+\makeatletter
+\@addtoreset{table}{problem}
+\makeatother
+
+%\let\StandardTheFigure\thefigure
+%\let\StandardTheTable\thetable
+%%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+%\renewcommand{\thefigure}{\theproblem}
+%\renewcommand{\thetable}{\theproblem}
+%%\numberwithin{figure}{section}
+
+%%\numberwithin{figure}{subsection}
+
+
+
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+
+\vspace{3cm}
+
+\title{ 
+	\logo{
+Setup for the Zedboard Xilinx FPGA
+	}
+}
+
+
+
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+%\title{Setup for the Zedboard Xilinx FPGA}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+\author{Tanmay Agarwal and G V V Sharma$^{*}$% <-this % stops a space
+\thanks{*The author is with the Department
+of Electrical Engineering, Indian Institute of Technology, Hyderabad
+502285 India e-mail:  gadepall@iith.ac.in.} 
+%All content in this manual is released under GNU GPL.  Free and open source.}% <-this % stops a space
+%\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+%\thanks{Manuscript received April 19, 2005; revised January 11, 2007.}}
+}
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~6, No.~1, January~2007}%
+%{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2007 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% make the title area
+\maketitle
+
+\tableofcontents
+
+\bigskip
+
+\begin{abstract}
+%%\boldmath
+This manual explains the software and hardware setup for the Zedboard Xilinx FPGA for a Linux desktop.  With some variations, it should be possible to use the instructions in this manual for other Xilinx boards as well. An example program in Verilog is provided for blinking an LED.
+%
+\end{abstract}
+% IEEEtran.cls defaults to using nonbold math in the Abstract.
+% This preserves the distinction between vectors and scalars. However,
+% if the journal you are submitting to favors bold math in the abstract,
+% then you can use LaTeX's standard command \boldmath at the very start
+% of the abstract to achieve this. Many IEEE journals frown on math
+% in the abstract anyway.
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+%Cooperative diversity, decode and forward, piecewise linear
+%\end{IEEEkeywords}
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+%\newpage
+%\section{Component Pin Diagrams}
+%%
+%\input{chapter1}
+%
+
+%\newpage
+\section{Software Setup}
+This manual was prepared using the following softwares.  Its possible to use other combinations of Ubuntu and Vivado as well.
+\begin{enumerate}
+\item Vivado 2016.4 Software
+
+\item Ubuntu 16.04 OS.
+\end{enumerate}
+\subsection{ Steps to download Vivado}
+\begin{enumerate}
+\item Go to Xilinx website and Create the Xilinx Account.
+
+\item Open your Xilinx Account and go to the support section.
+
+\item Under the support tag you will find Download \&  Licensing. Click on that.
+
+\item From left hand side click on 2016.4 version.
+
+\item Download the Linux self Extracting web installer file. This will be a .bin file.
+\item Open the terminal and go to directory where the file is saved.
+\item Run the .bin file in the terminal by using following commands.
+\begin{verbatim}
+sudo chmod +x file_name.bin
+sudo ./file_name.bin   
+
+\end{verbatim}
+
+These commands will run your file and a Vivado installer window will appear that will show the list of all the OSes  which the software supports.  If your OS is listed, click on next.
+
+\item It will ask for the Xilinx credentials. Just enter your Xilinx credentials and click on Download and install. It will take some time for downloading and installation.
+
+Note:- While downloading click on the boxes that it will ask for. In Linux vivado doesn't come with the Cable Drivers, you have to install it Manually.
+
+
+
+
+\end{enumerate}
+
+\subsection{Licensing}
+\begin{enumerate}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.4]{VLM.eps}
+    \caption{VLM}
+    \label{fig:VLM}
+\end{figure}
+
+
+\item After the installation one window will appear Vivado License Manager(VLM). In that Window click on Get free License Vivado free webpack SDK as shown in the Fig. \ref{fig:VLM}.
+\item Click on save link as.
+\item Now click on the link that you have saved. It will direct you to the License genrating section in the Xilinx website. See Fig. \ref{fig: License}.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.4]{License.eps}
+    \caption{License}
+    \label{fig: License}
+\end{figure}
+
+\item In License window under the certificate based licenses select vivado design suite: HL webpack 2016 and Earlier License and click on Genrate Node-Locked License.
+
+\item Click on next and next. Your License will be sent to your registered mail.  Download that License File.
+
+\item Now again go to VLM window in order to load the license.  In left hand side you will find Load license option. Just click on that.
+
+\item You can now load the License which you have downloaded (License File).
+\end{enumerate}
+
+\subsection{Running of Vivado}
+\begin{enumerate}
+\item In order to run Vivado software type these command in the Terminal.
+
+\begin{verbatim}
+
+source /opt/Xilinx/
+Vivado/2016.4/settings64.sh
+
+mkdir ~/vivado
+
+cd ~/vivado
+
+sudo chmod 777 -R /opt/Xilinx/
+
+sudo chmod 777 -R ~/.Xilinx
+
+vivado &
+
+\end{verbatim}
+
+Note:- For any problem refer to this link:-
+
+\url{http://mboers.github.io/zynq-notes/3-running-vivado/}
+
+\item After running these commands, your Vivado will be opened.
+\end{enumerate}
+
+\subsection{Cable Driver Installation}
+\begin{enumerate}
+
+\item Open the terminal and go to root.
+\item Now go to the Following directory using the cd command.
+    
+\begin{verbatim}
+<Vivado Install_Dir>/data/xicom/
+cable_drivers/lin64/install_script
+/install_drivers
+        
+\end{verbatim}
+
+\item Type ls command and hit enter. You will see the install driver file. Just install that file with the command
+
+\begin{verbatim}
+./install_drivers
+
+\end{verbatim}
+
+\item Now update the system with update command
+\begin{verbatim}
+sudo apt-get update.
+
+\end{verbatim}
+
+\item You have  completed the installation.
+\end{enumerate}
+
+
+
+%\input{./figs/components.tex}
+\section{Hardware Setup}
+Now we will start our First Experiment
+\subsection{Blinking of Led}
+\begin{enumerate}
+    \item Open the Vivado software and click on new project as in Fig. \ref{fig:New Project}.
+    
+    \begin{figure}[h]
+    \centering
+    \includegraphics[scale=.4]{vivado1.eps}
+    \caption{}
+    \label{fig:New Project}
+\end{figure}
+    \item Give the name of the project and click on next
+    \item Click on $next > next>next>next$
+    \item Click on board and select your board you are working on (Zedboard) as in Fig. \ref{fig:Board} 
+    
+     \begin{figure}[h]
+    \centering
+    \includegraphics[scale=.4]{vivado3.eps}
+\caption{}    
+    \label{fig:Board}
+\end{figure}
+    \item Click next and then finish. Your project window will be opened 
+    
+    \item In the left most side you will find the add source tab. Click on that. A window will be opened. In that select the Add or create design sources and click on  next, as shown in Fig.\ref{fig:Create}.
+    \begin{figure}[h]
+    \centering
+    \includegraphics[scale=.4]{vivado5.eps}
+    \caption{}
+    \label{fig:Create}
+\end{figure}
+    
+    \item Now click on the create file and then on finish
+    
+    \item Now in project manager under the design sources tag click on the file that you created and type the following code.
+    
+\begin{lstlisting}
+module bilink_led(input wire clk,output reg A);
+reg[26:0] delay;
+
+always @(posedge clk) begin
+delay = delay+1; 
+if(delay==27'b101111101011110000100000000)begin 
+delay <= 27'b0;
+  A<=(!A);
+   end
+
+   end   
+endmodule
+\end{lstlisting}
+
+
+\item After writing the code you have to mention the output port in the constraint file(XDC file for Zedboard.)You can download the XDC file from following link:
+
+\url{zedboard.org/support/documentation/1521}
+\item Add the constraint file in the project by going to Add sources.
+\item Add constraint 
+\item Select the XDC file from where you have saved it. Click on finish.
+\item Now make the changes in the XDC file according to Program.
+\item change CGLK with clk and JA1 with A. clk is the clock that we have taken and A is the variable that we are using for blinking that will be connected to pmod JA. See Fig. \ref{fig:PMOD}.
+\begin {figure}[h]
+    \centering
+    \includegraphics[scale=.4]{pmod.eps}
+    \caption{}
+    \label{fig:PMOD}
+\end{figure}
+\item Power the Zedboard.
+\item Connect the USB port on your computer to the micro-usb port of the Zedboard.  This micro-usb port of the Zedboard is also known as the jtag (Programing port, J17).
+\item Connect the JA1 with the Positive end of the Led and the Gnd to other end. Maker sure that the LED is connected to GND through a resistor $\ge 220 \Omega$.
+\item Now genrate the bit stream by clicking on genrate bit stream tag in left side of window. It will also ask for the synthesis. Click on ok.
+\item After genrating of bit stream it will ask for opening the implementation diagram. Click on cancel.
+\item Now open the Hardware Manager and click on target device and auto connect.
+\item Select the board and the click on program device.
+\item Observe the Output. Led will be Blinking.
+
+%Note:-  Also check the following:-
+%
+%JP1 open.\\
+%JP2 shorted\\
+%JP3 shorted\\
+%JP6 shorted\\
+%JP7 connected to GND\\
+%JP8 connected to GND\\
+%JP9 connected to GND\\
+%JP10 connected to GND\\
+%JP11 connected to GND\\
+%JP12 (XADC) open\\
+%JP13 open\\
+%J21 (current sense) open\\
+%VADJ shorted at 1V8
+\end{enumerate}
+%\input{./chapters/chapter1}
+%
+%\section{Display Control through Arduino Software}
+%\input{./chapters/chapter2}
+%%
+%\section{Decade Counter through Arduino}
+%\input{./chapters/chapter3}
+%%%
+%\section{Karnaugh Maps}
+%\input{./chapters/chapter4}
+%%
+%\section{Sequential Logic}
+%\input{./chapters/chapter5}
+%
+%\section{C Programming}
+%\input{./chapters/chapter6}
+
+%\input{arduinoport}
+
+%\bibliography{IEEEabrv,gvv_matrix}
+
+%\input{chapter2} 
+%%
+%\newpage
+%\section{$M$-ary Modulation}
+%\input{chapter3} 
+%
+%\newpage
+%\section{BER in Rayleigh Flat Slowly Fading Channels}
+%\input{chapter4} 
+
+\end{document}
+

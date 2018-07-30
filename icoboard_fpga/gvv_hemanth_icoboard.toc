@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Componets}{1}{section.1}
+\contentsline {section}{\numberline {2}Software Setup}{1}{section.2}
+\contentsline {section}{\numberline {3}Example Codes}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}Blink LED}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Display}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Decade Counter}{3}{subsection.3.3}
