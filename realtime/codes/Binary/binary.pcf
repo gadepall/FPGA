@@ -1,0 +1,10 @@
+set_io A A5
+set_io B A2
+set_io C C3
+set_io D B4
+
+
+set_io a D6
+set_io b C6
+set_io c C7
+set_io d D7
