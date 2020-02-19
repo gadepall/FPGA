@@ -162,7 +162,7 @@ columns=fullflexible
 
 \title{
 	\logo{
-Balancing a Chemical Equation
+Realtime I/O using Icoboard
 	}
 }
 \author{ G V V Sharma$^{*}$% <-this % stops a space
@@ -294,45 +294,14 @@ svn co https://github.com/gadepall/FPGA/trunk/realtime/pyexam/codes
 %,ref=\thesection.\theenumi]
 \renewcommand{\theequation}{\theenumi}
 \section{Components}
-The necessary components for this manual are listed in Table 
+The necessary components for this manual are listed in Table \ref{table:components}
+
 \begin{table}[!h]
 \centering
 \input{./tabel/components}
 \caption{}
 \label{table:components}
 \end{table}
-\section{Software Setup}
-\subsection{Icoboard}
-For installing icoboard
-Open a terminal and execute the following commands.
-
-\begin{lstlisting}
-git clone https://github.com/WiringPi/WiringPi.git
-cd WiringPi && ./build
-sudo apt install build-essential clang bison flex libreadline-dev gawk tcl-dev libffi-dev mercurial graphviz xdot pkg-config libftdi-dev
-
-#Icoprog
-#On termuxarch run as root user
-#With termuxarch and pizero, this is the only tool required at the pi
-svn co http://svn.clifford.at/handicraft/2015/icoprog
-cd icoprog && make install
-
-#Icestorm
-#On termuxarch run as normal user without sudo
-git clone https://github.com/cliffordwolf/icestorm
-cd icestorm && make -j4 && sudo make install
-
-#arachne-pnr
-#On termuxarch run as normal user without sudo
-git clone https://github.com/cseed/arachne-pnr
-cd arachne-pnr && make -j4 && sudo make install
-
-#Yosys
-#On termuxarch run as normal user without sudo
-git clone https://github.com/cliffordwolf/yosys
-cd yosys && make -j4 && sudo make install
-
-\end{lstlisting}
 \section{Hardware Setup}
 \subsection{4 bit binary input}
 \begin{itemize}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2020.2.7)  18 FEB 2020 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Termux) (preloaded format=latex 2019.9.28)  18 FEB 2020 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1475,68 +1475,64 @@ File: tlc.eps Graphic file (type eps)
 \gnumericColA=\skip78
 \gnumericColB=\skip79
 )
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 []\OT1/txr/m/n/12 The hard-ware con-nec-tions be-tween the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+[]\OT1/txr/m/n/12 Take the wires and con-nect them to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+\OT1/txr/m/n/12 A5,A2,C3,B4 of the icoboard . These
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 [1
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-[]\OT1/txr/m/n/12 Take the wires and con-nect them to
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-\OT1/txr/m/n/12 A5,A2,C3,B4 of the icoboard . These
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
-
- []
-
-(./tabel/connection.tex)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-(./tabel/seven.tex)
+] (./tabel/connection.tex) (./tabel/seven.tex)
 File: ./tabel/icoboard2.eps Graphic file (type eps)
  <./tabel/icoboard2.eps>
 
@@ -1552,28 +1548,35 @@ File: ./tabel/raspberry.eps Graphic file (type eps)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 420.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 420.
- (./python_exam.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 420.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 420.
-Package rerunfilecheck Info: File `python_exam.out' has not changed.
-(rerunfilecheck)             Checksum: B05CF82FC2D395B9B8EBD88E404B319A;337.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 384.
+[2] [3
 
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 384.
+ (./python_exam.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 384.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 384.
+
+
+Package rerunfilecheck Warning: File `python_exam.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `python_exam.out':
+(rerunfilecheck)             Before: B05CF82FC2D395B9B8EBD88E404B319A;337
+(rerunfilecheck)             After:  2F8A8517F179BA20C8C41F479BF88D76;231.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 420.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 384.
  ) 
 Here is how much of TeX's memory you used:
  32087 strings out of 492624
- 689609 string characters out of 6119217
- 980989 words of memory out of 5000000
+ 689609 string characters out of 6119216
+ 904989 words of memory out of 5000000
  35401 multiletter control sequences out of 15000+600000
  77739 words of font info for 194 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,13n,69p,503b,1116s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,69p,503b,1116s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on python_exam.dvi (3 pages, 37812 bytes).
+Output written on python_exam.dvi (3 pages, 29644 bytes).
